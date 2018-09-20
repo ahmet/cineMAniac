@@ -8,7 +8,4 @@
 
 import UIKit
 
-class openingView: UIView {
-  
-
-}
+class openingView: UIView {}

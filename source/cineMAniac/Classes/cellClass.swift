@@ -9,10 +9,6 @@
 import UIKit
 
 class cellClass: UICollectionViewCell {
-    
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellName: UILabel!
-    
-    
-    
 }

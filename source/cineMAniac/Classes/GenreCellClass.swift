@@ -9,7 +9,6 @@
 import UIKit
 
 class GenreCellClass: UICollectionViewCell {
-    
     @IBOutlet weak var cellName: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
 }

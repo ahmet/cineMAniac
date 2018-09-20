@@ -9,8 +9,6 @@
 import UIKit
 
 class FavoriteCell: UICollectionViewCell {
-    
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellName: UILabel!
-    
 }

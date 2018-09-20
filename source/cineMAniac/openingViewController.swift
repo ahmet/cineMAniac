@@ -8,10 +8,4 @@
 
 import UIKit
 
-class openingViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-}
+class openingViewController: UIViewController {}

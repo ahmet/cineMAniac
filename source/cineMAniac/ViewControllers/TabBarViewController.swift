@@ -9,36 +9,31 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-    
+    let items: [[String:String]] = [
+        ["title": "Popular", "image": "top"],
+        ["title": "Search", "image": "search"],
+        ["title": "Categories", "image": "category"],
+        ["title": "Favorites", "image": "favorite"],
+    ]
+
     var tabItem1 = UITabBarItem()
     var tabItem2 = UITabBarItem()
     var tabItem3 = UITabBarItem()
     var tabItem4 = UITabBarItem()
-    
-    
+
     let topIMG = UIImage(named: "top")
     let searchIMG = UIImage(named: "search")
     let categoryIMG = UIImage(named: "category")
     let favoriteIMG = UIImage(named: "favorite")
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tabItem1 = self.tabBar.items![0]
-        tabItem2 = self.tabBar.items![1]
-        tabItem3 = self.tabBar.items![2]
-        tabItem4 = self.tabBar.items![3]
-        
-        tabItem1.title = "Popular"
-        tabItem2.title = "Search"
-        tabItem3.title = "Categories"
-        tabItem4.title = "Favorites"
-        
-        tabItem1.image = topIMG
-        tabItem2.image = searchIMG
-        tabItem3.image = categoryIMG
-        tabItem4.image = favoriteIMG
-        
-    }
 
+        guard let tabBarItems = self.tabBar.items else { return }
+
+        for (index, item) in items.enumerated() {
+            tabBarItems[index].title = item["title"]
+            tabBarItems[index].image = UIImage(named:item["image"])
+        }
+    }
 }
